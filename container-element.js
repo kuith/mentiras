@@ -20,7 +20,7 @@ import {LitElement, html, css} from 'lit-element';
  * @slot - This element has a slot
  * @csspart button - The button
  */
-export class MyElement extends LitElement {
+export class containerElement extends LitElement {
   static get styles() {
     return css`
       :host {
@@ -67,4 +67,4 @@ export class MyElement extends LitElement {
   }
 }
 
-window.customElements.define('my-element', MyElement);
+window.customElements.define('container-element', containerElement);

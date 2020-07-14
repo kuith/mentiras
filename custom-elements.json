@@ -2,8 +2,8 @@
   "version": "experimental",
   "tags": [
     {
-      "name": "my-element",
-      "path": "./my-element.js",
+      "name": "container-element",
+      "path": "./container-element.js",
       "description": "An example element.",
       "attributes": [
         {
@@ -49,8 +49,8 @@
       ]
     },
     {
-      "name": "my-element",
-      "path": "./docs-/my-element.bundled.js",
+      "name": "container-element",
+      "path": "./docs-/container-element.bundled.js",
       "attributes": [
         {
           "name": "name",
