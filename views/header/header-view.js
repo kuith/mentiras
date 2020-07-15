@@ -1,7 +1,9 @@
-import { LitElement, html } from 'lit-element';
+import { LitElement, html, css } from 'lit-element';
 import '../componentes/list-item.js';
+import { jornadas as jornadasDatos, investigadores as investigadoresDatos} from '../ayuda/datos.js';
 
 export class headerView extends LitElement {
+  
   static get properties() {
     return {
       jornadas: { type: Array },
@@ -11,14 +13,26 @@ export class headerView extends LitElement {
 
   constructor() {
     super();
-    this.jornadas = ['jornada 0', 'jornada 1'];
-    this.investigadores = ['investigador 1', 'investigador 2', 'investigador 3'];
+    this.jornadas = jornadasDatos;
+    this.investigadores = investigadoresDatos;
+  }
+
+  static get styles() {
+    return css`
+      div { display: flex; }
+    `;
   }
 
   render() {
     return html`
-      ${this.jornadas.map(i => html`<list-item itemText=${i}></list-item>`)}
-      ${this.investigadores.map(i => html`<list-item itemText=${i}></list-item>`)}
+    <div>
+      <ul>
+        ${this.jornadas.map(i => html`<list-item itemText=${i.nombre}></list-item>`)}
+      </ul>
+      <ul>
+        ${this.investigadores.map(i => html`<list-item itemText=${i.nombre}></list-item>`)}
+      </ul>
+    </div>
     `;
   }
 

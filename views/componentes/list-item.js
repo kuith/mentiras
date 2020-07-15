@@ -15,7 +15,7 @@ export class listItem extends LitElement {
 
   render() {
     return html`
-      <p>${this.itemText}</p>
+      <li>${this.itemText}</li>
     `;
   }
 
