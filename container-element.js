@@ -5,10 +5,14 @@ import './views/header/header-view.js';
 
 export class containerElement extends LitElement {
 
+  handleItemJornadaClick(event) {
+    alert(event.detail.texto);
+  }
+  
 render() {
   return html`
     <div>
-      <header-view></header-view>
+      <header-view @item-jornada-click=${this.handleItemJornadaClick}></header-view>
       <main-view></main-view>
     </div>
     `;
