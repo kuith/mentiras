@@ -5,8 +5,9 @@ export class ItemJornada extends LitElement {
   static get styles() {
     return css`
       li {
-        margin: 1em;
-        font-size: 1.5em;
+        margin: 0.5em;
+        list-style: none;
+        font-family: 'Red Rose', cursive;
       }
     `;
   }

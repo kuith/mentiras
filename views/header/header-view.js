@@ -1,5 +1,6 @@
 import {LitElement, html, css} from 'lit-element';
-import '../componentes/item-jornada.js';
+import './item-jornada.js';
+import './item-investigador.js';
 import {
   jornadas as jornadasDatos,
   investigadores as investigadoresDatos,
@@ -18,6 +19,7 @@ export class headerView extends LitElement {
     this.jornadas = jornadasDatos;
     this.investigadores = investigadoresDatos;
     this.plantillaJornada = this.plantillaJornada.bind(this);
+    this.plantillaInvestigador = this.plantillaInvestigador.bind(this);
   }
 
   static get styles() {
@@ -35,9 +37,16 @@ export class headerView extends LitElement {
     ></item-jornada>`;
   }
 
-  handleItemJornadaClick(event) {
-    //alert(event.detail.texto);
+  plantillaInvestigador(investigador) {
+    return html` <item-investigador
+      .investigador=${investigador}
+      @item-investigador-click=${this.handleItemInvestigadorClick}
+      ></item-investigador>`;
   }
+
+  /* handleItemJornadaClick(event) {
+    //alert(event.detail.texto);
+  } */
 
   render() {
     return html`
@@ -45,11 +54,9 @@ export class headerView extends LitElement {
         <ul>
           ${this.jornadas.map(this.plantillaJornada)}
         </ul>
-        <!-- <ul>
-        ${this.investigadores.map(
-          (i) => html`<list-item itemText=${i.nombre}></list-item>`
-        )}
-      </ul> -->
+        <ul>
+          ${this.investigadores.map(this.plantillaInvestigador)}
+        </ul>
       </div>
     `;
   }
