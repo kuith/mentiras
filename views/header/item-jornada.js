@@ -2,7 +2,7 @@ import { LitElement, html, css } from 'lit-element';
 
 export class ItemJornada extends LitElement {
 
-  static get styles() {
+ static get styles() {
     return css`
       li {
         margin: 0.5em;
@@ -10,7 +10,7 @@ export class ItemJornada extends LitElement {
         font-family: 'Red Rose', cursive;
       }
     `;
-  }
+ }
 
   static get properties() {
     return {
