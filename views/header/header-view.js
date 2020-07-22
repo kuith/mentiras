@@ -13,7 +13,6 @@ export class headerView extends LitElement {
       * {
         margin: 0;
         padding: 0;
-        font-family: 'Red Rose', cursive;
       }
       nav {
         background-color: #ebf5fb; /*#ffffff*/
@@ -82,7 +81,7 @@ export class headerView extends LitElement {
     this.investigadores = investigadoresDatos;
     this.plantillaJornada = this.plantillaJornada.bind(this);
     this.plantillaInvestigador = this.plantillaInvestigador.bind(this);
-    //this.plantillaInicio = this.plantillaInicio(this);
+    this.handleInicioClick = this.handleInicioClick.bind(this);
   }
 
   plantillaJornada(jornada) {
@@ -99,19 +98,21 @@ export class headerView extends LitElement {
     ></item-investigador>`;
   }
 
-  /*  plantillaInicio(inicio) {
-    return html` <ficha-inicio
-      .inicio=${inicio}
-      @ficha-inicio-click=${this.handleInicioClick}
-    >
-    </ficha-inicio>`;
-  } */
+  handleInicioClick() {
+    this.dispatchEvent(
+      new CustomEvent('item-inicio-click', {
+        detail: "inicio",
+        bubbles: true,
+        composed: true,
+      })
+    );
+  }
 
   render() {
     return html`
       <nav>
         <ul>
-          <li>Inicio</li>
+          <li @click="${this.handleInicioClick}">Inicio</li>
           <li>
             Jornadas
             <ul>

@@ -7,30 +7,20 @@ export class FichaInicio extends LitElement {
 
   static get properties() {
     return {
-      inicio: {type: Object},
+      
     };
   }
 
   constructor() {
     super();
-    this.inicio = null;
-  }
-
-  handleClick() {
-    this.dispatchEvent(
-      new CustomEvent('item-jornada-click', {
-        detail: this.inicio,
-        bubbles: true,
-        composed: true,
-      })
-    );
+    
   }
 
   render() {
     return html`
-      <li @click="${this.handleClick}">
+      <div>
         Pantalla inicial
-      </li>
+      </div>
     `;
   }
 }

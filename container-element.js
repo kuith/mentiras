@@ -1,24 +1,22 @@
-import {LitElement, html} from 'lit-element';
+import {LitElement, html, css} from 'lit-element';
 import './views/header/header-view.js';
 import './views/componentes/ficha-jornada';
 import './views/componentes/ficha.investigador';
 import './views/componentes/ficha-inicio';
-//import {FichaInicio} from './views/componentes/ficha-inicio';
 
 export class containerElement extends LitElement {
-  /* static get styles() {
+  static get styles() {
     return css`
       * {
-        background-color: #ebf5fb;
+        font-family: 'Red Rose';
       }
     `;
-  } */
+  }
 
   static get properties() {
     return {
       jornadaRecogida: {type: Object},
       investigadorRecogido: {type: Object},
-      //inicioRecogido: {type: Object},
       cualclicked: {type: String},
     };
   }
@@ -27,7 +25,6 @@ export class containerElement extends LitElement {
     super();
     this.jornadaRecogida = null;
     this.investigadorRecogido = null;
-    //this.inicioRecogido = null;
     this.cualclicked = '';
   }
 
@@ -41,10 +38,10 @@ export class containerElement extends LitElement {
     this.cualClicked = 'investigador';
   }
 
-  /* hadleInicioClick(event) {
-    this.inicioRecogido = event.detail;
+  handleItemInicioClick() {
     this.cualClicked = 'inicio';
-  } */
+    //alert(this.cualClicked);
+  }
 
   mostrarCuerpo() {
     switch (this.cualClicked) {
@@ -58,12 +55,12 @@ export class containerElement extends LitElement {
             .investigador=${this.investigadorRecogido}
           ></ficha-investigador>
         `;
-      /*  case 'inicio':
+      case 'inicio':
         return html`
-          <Ficha-inicio .inicio=${this.inicioRecogido}></Ficha-inicio>
-        `; */
+          <div> El principio de todo</div>
+        `;
       default:
-        return html` <ficha-inicio></ficha-inicio> `;
+        return html` <ficha-inicio></ficha-inicio>`;
     }
   }
 
@@ -73,6 +70,7 @@ export class containerElement extends LitElement {
       <header-view
         @item-jornada-click=${this.handleItemJornadaClick}
         @item-investigador-click=${this.handleItemInvestigadorClick}
+        @item-inicio-click = ${this.handleItemInicioClick}
       ></header-view>
     </div>
     <div>

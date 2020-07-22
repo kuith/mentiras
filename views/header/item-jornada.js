@@ -24,7 +24,7 @@ export class ItemJornada extends LitElement {
   handleClick() {
     this.dispatchEvent(
       //lanza evento
-      new CustomEvent('item-jornada-click', {
+      new CustomEvent('item-jornada-click', { //nombre del evento que lanzo
         //evento personalizado con nombre y objeto con propiedades del evento
         detail: this.jornada, // informacion a transmitir (objetos, texto...)
         bubbles: true, // permitir propagar evento hasta la barrera del shadow dom
