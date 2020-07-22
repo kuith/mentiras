@@ -1,6 +1,7 @@
 import {LitElement, html, css} from 'lit-element';
 import './item-jornada.js';
 import './item-investigador.js';
+import '../componentes/ficha-inicio.js';
 import {
   jornadas as jornadasDatos,
   investigadores as investigadoresDatos,
@@ -9,14 +10,61 @@ import {
 export class headerView extends LitElement {
   static get styles() {
     return css`
-      *{
+      * {
+        margin: 0;
+        padding: 0;
         font-family: 'Red Rose', cursive;
       }
       nav {
+        background-color: #ebf5fb; /*#ffffff*/
+        width: 100%;
+        height: 4rem;
         display: flex;
       }
-      li{
-        list-style: none;
+      nav ul {
+        float: left;
+        display: flex;
+      }
+
+      nav ul li {
+        float: left;
+        /*list-style: none;*/
+        position: relative;
+      }
+
+      nav ul li {
+        display: block;
+        padding: 0rem 2rem;
+        line-height: 2rem;
+        color: #0a0a0a;
+        text-decoration: none;
+      }
+
+      nav ul li ul {
+        display: none;
+        position: absolute;
+        border: 1px solid #cccccc;
+        background-color: #d4e6f1; /*#ffffff*/
+        padding: 0rem 1rem;
+        width: 100%;
+      }
+
+      nav ul li:hover ul {
+        display: block;
+      }
+
+      nav ul li ul li {
+        width: 100%;
+      }
+
+      nav ul li ul li {
+        padding: 1rem 2rem;
+        line-height: unset;
+        white-space: nowrap;
+      }
+
+      nav ul li ul li:hover {
+        background-color: red; /*#efefef*/
       }
     `;
   }
@@ -34,6 +82,7 @@ export class headerView extends LitElement {
     this.investigadores = investigadoresDatos;
     this.plantillaJornada = this.plantillaJornada.bind(this);
     this.plantillaInvestigador = this.plantillaInvestigador.bind(this);
+    //this.plantillaInicio = this.plantillaInicio(this);
   }
 
   plantillaJornada(jornada) {
@@ -47,19 +96,30 @@ export class headerView extends LitElement {
     return html` <item-investigador
       .investigador=${investigador}
       @item-investigador-click=${this.handleItemInvestigadorClick}
-      ></item-investigador>`;
+    ></item-investigador>`;
   }
+
+  /*  plantillaInicio(inicio) {
+    return html` <ficha-inicio
+      .inicio=${inicio}
+      @ficha-inicio-click=${this.handleInicioClick}
+    >
+    </ficha-inicio>`;
+  } */
 
   render() {
     return html`
       <nav>
         <ul>
-          <li>Jornadas
+          <li>Inicio</li>
+          <li>
+            Jornadas
             <ul>
               ${this.jornadas.map(this.plantillaJornada)}
             </ul>
           </li>
-          <li>investigadores
+          <li>
+            investigadores
             <ul>
               ${this.investigadores.map(this.plantillaInvestigador)}
             </ul>
@@ -71,10 +131,6 @@ export class headerView extends LitElement {
 }
 
 window.customElements.define('header-view', headerView);
-
-
-
-
 
 /* render() {
   return html`
