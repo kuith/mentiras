@@ -22,6 +22,7 @@ export const jornadas = [
 export const investigadores = [
   {
     nombre: 'Dr. Paul Udko',
+    nombreImagen: 'udko.jpg',
     profesion: 'Alienista',
     motivacion: 'Curiosidad',
     beneficios:
@@ -50,6 +51,7 @@ export const investigadores = [
   },
   {
     nombre: 'Dra. Evelyn Malley',
+    nombreImagen: 'malley.jpg',
     profesion: 'Médico',
     motivacion: 'Impacto Súbito',
     beneficios:
@@ -74,9 +76,8 @@ export const investigadores = [
       'Astronomía 0, Cerrajería 0, Farmacología* 2, Fotografía 0, Habilidad Artesanal 0, Habilidad Artística 0, Medicina Forense* 2, Química 1, Recogida de Pruebas 0, Supervivencia 0.',
     generales:
       'Armas 0, Armas de Fuego 2, Atletismo 2, Birlar 2, Conducción 4, Cordura 8, Disfraz 0, Electricidad 0, Escaramuza 4, Estabilidad 10, Explosivos 0, Hipnosis 0, Huida 8, Mecánica 2, Monta 0, Ocultar 1, Pilotaje 0, Preparación 0, Primeros Auxilios* 12, Psicoanálisis 6, Salud 12, Seguir 0, Sentir el Peligro 6, Sigilo 1.',
-  }
-    ];
-  
+  },
+];
 
 /* {
     nombre: 'Margaret Sullivan',

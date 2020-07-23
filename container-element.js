@@ -52,12 +52,15 @@ export class containerElement extends LitElement {
       case 'investigador':
         return html`
           <ficha-investigador
-            .investigador=${this.investigadorRecogido}
+            .investigador="${this.investigadorRecogido}"
+            rutaImagenes="../views/imagenes/"
           ></ficha-investigador>
         `;
       case 'inicio':
         return html`
-          <div> El principio de todo</div>
+          <div>
+            El principio de todo
+          </div>
         `;
       default:
         return html` <ficha-inicio></ficha-inicio>`;

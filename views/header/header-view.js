@@ -101,7 +101,7 @@ export class headerView extends LitElement {
   handleInicioClick() {
     this.dispatchEvent(
       new CustomEvent('item-inicio-click', {
-        detail: "inicio",
+        detail: 'inicio',
         bubbles: true,
         composed: true,
       })

@@ -6,14 +6,11 @@ export class FichaInicio extends LitElement {
   }
 
   static get properties() {
-    return {
-      
-    };
+    return {};
   }
 
   constructor() {
     super();
-    
   }
 
   render() {
