@@ -15,7 +15,7 @@ export class headerView extends LitElement {
         padding: 0;
       }
       nav {
-        background-color: #ebf5fb; /*#ffffff*/
+        background-color: #fbeee6; /*#ffffff*/
         width: 100%;
         height: 4rem;
         display: flex;
@@ -43,7 +43,7 @@ export class headerView extends LitElement {
         display: none;
         position: absolute;
         border: 1px solid #cccccc;
-        background-color: #d4e6f1; /*#ffffff*/
+        background-color: #f6ddcc; /*#ffffff*/
         padding: 0rem 1rem;
         width: 100%;
       }
