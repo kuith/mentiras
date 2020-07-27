@@ -77,6 +77,9 @@ export const investigadores = [
     generales:
       'Armas 0, Armas de Fuego 2, Atletismo 2, Birlar 2, Conducción 4, Cordura 8, Disfraz 0, Electricidad 0, Escaramuza 4, Estabilidad 10, Explosivos 0, Hipnosis 0, Huida 8, Mecánica 2, Monta 0, Ocultar 1, Pilotaje 0, Preparación 0, Primeros Auxilios* 12, Psicoanálisis 6, Salud 12, Seguir 0, Sentir el Peligro 6, Sigilo 1.',
   },
+  {
+    nombre: 'Margaret Sullivan',
+  }
 ];
 
 /* {

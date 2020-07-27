@@ -11,14 +11,20 @@ export class headerView extends LitElement {
   static get styles() {
     return css`
       * {
-        margin: 0;
-        padding: 0;
+        font-family: 'UnifrakturMaguntia', cursive;
+        font-size: 1em;
+      }
+      img{
+        width:100%;
+        display:block;
       }
       nav {
         background-color: #fef0d2; /*#ffffff*/
         width: 100%;
         height: 4rem;
         display: flex;
+        margin:0;
+        padding:0;
       }
       nav ul {
         float: left;
@@ -110,6 +116,7 @@ export class headerView extends LitElement {
 
   render() {
     return html`
+      <img src="../views/imagenes/periodico.png">
       <nav>
         <ul>
           <li @click="${this.handleInicioClick}">Inicio</li>
@@ -120,7 +127,7 @@ export class headerView extends LitElement {
             </ul>
           </li>
           <li>
-            investigadores
+            Investigadores
             <ul>
               ${this.investigadores.map(this.plantillaInvestigador)}
             </ul>
@@ -132,19 +139,3 @@ export class headerView extends LitElement {
 }
 
 window.customElements.define('header-view', headerView);
-
-/* render() {
-  return html`
-      <div>
-      <nav>
-        <ul>
-          ${this.jornadas.map(this.plantillaJornada)}
-        </ul>
-        <ul>
-          ${this.investigadores.map(this.plantillaInvestigador)}
-        </ul>
-        </nav>
-      </div>
-    `;
-}
-} */
