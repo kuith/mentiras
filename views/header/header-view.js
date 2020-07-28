@@ -13,18 +13,19 @@ export class headerView extends LitElement {
       * {
         font-family: 'UnifrakturMaguntia', cursive;
         font-size: 1em;
+        margin-bottom: 0;
       }
-      img{
-        width:100%;
-        display:block;
+      img {
+        width: 100%;
+        display: block;
       }
       nav {
         background-color: #fef0d2; /*#ffffff*/
         width: 100%;
         height: 4rem;
         display: flex;
-        margin:0;
-        padding:0;
+        margin: 0;
+        padding: 0;
       }
       nav ul {
         float: left;
@@ -116,7 +117,7 @@ export class headerView extends LitElement {
 
   render() {
     return html`
-      <img src="../views/imagenes/periodico.png">
+      <img src="../views/imagenes/periodico.png" />
       <nav>
         <ul>
           <li @click="${this.handleInicioClick}">Inicio</li>

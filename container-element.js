@@ -9,6 +9,14 @@ export class containerElement extends LitElement {
     return css`
       * {
         font-family: 'Red Rose';
+        background-color: #fef0d2;
+      }
+      hr {
+        margin: 0em;
+        border: 0;
+        height: 1px;
+        background: #333;
+        background-image: linear-gradient(to right, #ccc, #333, #ccc);
       }
     `;
   }
@@ -25,6 +33,10 @@ export class containerElement extends LitElement {
     super();
     this.jornadaRecogida = null;
     this.investigadorRecogido = null;
+    this.cualclicked = '';
+  }
+
+  limpiarClicked() {
     this.cualclicked = '';
   }
 
@@ -77,6 +89,7 @@ export class containerElement extends LitElement {
       ></header-view>
     </div>
     <div>
+      <hr />
       ${this.mostrarCuerpo()}
     </div>
     
