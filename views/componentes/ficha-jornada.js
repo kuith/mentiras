@@ -6,6 +6,7 @@ export class FichaJornada extends LitElement {
       div {
         margin: 0em 1em 0em 1em;
         font-family: 'Red Rose', cursive;
+        justify-content: center;
       }
     `;
   }

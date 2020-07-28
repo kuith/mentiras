@@ -12,7 +12,7 @@ export class containerElement extends LitElement {
         background-color: #fef0d2;
       }
       hr {
-        margin: 0em;
+        margin: 0;
         border: 0;
         height: 1px;
         background: #333;
