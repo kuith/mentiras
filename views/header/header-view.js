@@ -133,6 +133,7 @@ export class headerView extends LitElement {
               ${this.investigadores.map(this.plantillaInvestigador)}
             </ul>
           </li>
+          <li>Admin</li>
         </ul>
       </nav>
     `;

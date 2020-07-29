@@ -2,7 +2,12 @@ import {LitElement, html, css} from 'lit-element';
 
 export class FichaInicio extends LitElement {
   static get styles() {
-    return css``;
+    return css`
+      div {
+          margin: 2em 1em 0em 1em;
+          text-align: center;
+        }
+    `;
   }
 
   static get properties() {
@@ -16,7 +21,7 @@ export class FichaInicio extends LitElement {
   render() {
     return html`
       <div>
-        Pantalla inicial
+        Diario de la campaña Mentiras Eternas
       </div>
     `;
   }

@@ -7,8 +7,6 @@ import './views/componentes/ficha-inicio';
 export class containerElement extends LitElement {
   static get styles() {
     return css`
-      * {
-      }
       hr {
         margin: 0;
         border: 0;
@@ -50,7 +48,7 @@ export class containerElement extends LitElement {
 
   handleItemInicioClick() {
     this.cualClicked = 'inicio';
-    //alert(this.cualClicked);
+    console.log(this.cualClicked);
   }
 
   mostrarCuerpo() {
@@ -68,12 +66,11 @@ export class containerElement extends LitElement {
         `;
       case 'inicio':
         return html`
-          <div>
-            El principio de todo
-          </div>
+          <ficha-inicio></ficha-inicio>
         `;
       default:
-        return html` <ficha-inicio></ficha-inicio>`;
+        this.cualClicked = "";
+        return html`<ficha-inicio></ficha-inicio>`;
     }
   }
 
