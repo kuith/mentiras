@@ -8,8 +8,6 @@ export class containerElement extends LitElement {
   static get styles() {
     return css`
       * {
-        font-family: 'Red Rose';
-        background-color: #fef0d2;
       }
       hr {
         margin: 0;
@@ -83,6 +81,7 @@ export class containerElement extends LitElement {
     return html`
     <div>
       <header-view
+        rutaImagen = "../views/imagenes/periodico.png"
         @item-jornada-click=${this.handleItemJornadaClick}
         @item-investigador-click=${this.handleItemInvestigadorClick}
         @item-inicio-click = ${this.handleItemInicioClick}

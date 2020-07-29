@@ -1,4 +1,5 @@
 import {LitElement, html, css} from 'lit-element';
+import {unsafeHTML} from 'lit-html/directives/unsafe-html.js';
 
 export class FichaInvestigador extends LitElement {
   static get styles() {
@@ -24,7 +25,7 @@ export class FichaInvestigador extends LitElement {
       }
       .basicos3 {
         padding: 0.5em;
-        white-space: pre-line;
+        /* white-space: pre-line; */
         margin-left: 1%;
         width: 60%;
         background-color: #f0e3c7;
@@ -33,7 +34,7 @@ export class FichaInvestigador extends LitElement {
         width: 100%;
       }
 
-      .contenedorGeneral {
+      .contenedorGenerales {
         margin: 0.5em 1em 0.5em 1em;
         display: inline-flex;
         flex-wrap: nowrap;
@@ -82,6 +83,11 @@ export class FichaInvestigador extends LitElement {
     this.rutaImagenes = '';
   }
 
+  sustituirRetornos(textoJson) {
+    var resultado = textoJson.replace(/\n/g, '<br/>');
+    return resultado;
+  }
+
   render() {
     return html`
       <div class="contenedorImagenBasicos">
@@ -98,37 +104,37 @@ export class FichaInvestigador extends LitElement {
         </div>
         <div class="basicos3">
           <h3>Beneficios de la profesión</h3>
-          ${this.investigador.beneficios}
+          ${unsafeHTML(this.sustituirRetornos(this.investigador.beneficios))}
         </div>
       </div>
       <!-- pilares, fuentes, transfondo, personalidad, vinculo -->
-      <div class="contenedorGeneral">
+      <div class="contenedorGenerales">
         <div class="contenedorPilares">
           <h3>Pilares de cordura</h3>
-          ${this.investigador.pilares}
+          ${unsafeHTML(this.sustituirRetornos(this.investigador.pilares))}
         </div>
         <div class="contenedorFuentes">
           <h3>Fuentes de estabilidad</h3>
-          ${this.investigador.fuentes}
+          ${unsafeHTML(this.sustituirRetornos(this.investigador.fuentes))}
         </div>
       </div>
 
-      <div class="contenedorGeneral">
+      <div class="contenedorGenerales">
         <div class="contenedor1">
           <h3>Transfondo</h3>
-          ${this.investigador.trasfondo}
+          ${unsafeHTML(this.sustituirRetornos(this.investigador.trasfondo))}
         </div>
         <div class="contenedor2">
           <h3>Personalidad</h3>
-          ${this.investigador.personalidad}
+          ${unsafeHTML(this.sustituirRetornos(this.investigador.personalidad))}
         </div>
         <div class="contenedor2">
           <h3>Vínculo</h3>
-          ${this.investigador.vinculo}
+          ${unsafeHTML(this.sustituirRetornos(this.investigador.vinculo))}
         </div>
       </div>
       <!-- academicas, interpersonales, tecnicas, generales -->
-      <div class="contenedorGeneral">
+      <div class="contenedorGenerales">
         <div class="contenedor1">
           <h3>Habilidades Académicas</h3>
           ${this.investigador.academicas}
@@ -143,7 +149,7 @@ export class FichaInvestigador extends LitElement {
         </div>
       </div>
       <!-- generales -->
-      <div class="contenedorGeneral">
+      <div class="contenedorGenerales">
         <div class="contenedor3">
           <h3>Habilidades Generales</h3>
           ${this.investigador.generales}

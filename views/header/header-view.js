@@ -12,7 +12,6 @@ export class headerView extends LitElement {
     return css`
       * {
         font-family: 'UnifrakturMaguntia', cursive;
-        font-size: 1em;
         margin-bottom: 0;
       }
       img {
@@ -34,7 +33,6 @@ export class headerView extends LitElement {
 
       nav ul li {
         float: left;
-        /*list-style: none;*/
         position: relative;
       }
 
@@ -79,6 +77,7 @@ export class headerView extends LitElement {
     return {
       jornadas: {type: Array},
       investigadores: {type: Array},
+      rutaImagen: {type: String},
     };
   }
 
@@ -88,6 +87,7 @@ export class headerView extends LitElement {
     this.investigadores = investigadoresDatos;
     this.plantillaJornada = this.plantillaJornada.bind(this);
     this.plantillaInvestigador = this.plantillaInvestigador.bind(this);
+    this.rutaImagen = '';
     this.handleInicioClick = this.handleInicioClick.bind(this);
   }
 
@@ -117,7 +117,7 @@ export class headerView extends LitElement {
 
   render() {
     return html`
-      <img src="../views/imagenes/periodico.png" />
+      <img src="${this.rutaImagen}" />
       <nav>
         <ul>
           <li @click="${this.handleInicioClick}">Inicio</li>

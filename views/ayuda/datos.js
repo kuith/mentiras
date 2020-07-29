@@ -33,7 +33,7 @@ export const investigadores = [
     pilares:
       'El imparable progreso del conocimiento científico.\nTu creencia en la capacidad de la mente para expandir su entendimiento y abarcar todo lo que puede percibir.',
     fuentes:
-      'Jonas, uno de tus primeros pacientes, al que trataste en Dixmont.El Dr. Masterson, un amigo íntimo del Colegio Profesional de Filadelfia.El Dr. Jones, un profesor de ciencias conductuales y tu alma mater.',
+      'Jonas, uno de tus primeros pacientes, al que trataste en Dixmont.\nEl Dr. Masterson, un amigo íntimo del Colegio Profesional de Filadelfia.\nEl Dr. Jones, un profesor de ciencias conductuales y tu alma mater.',
     trasfondo:
       'En la escuela de medicina, tu interés por las complejidades de la mente superaba de lejos a la atracción que te pudieran suscitar las insignificantes funciones del resto del organismo. Tu carrera profesional comenzó en el Hospital de Dixmont para Dementes, donde tu curiosidad fue en aumento. Mientras tus coetáneos se centraban principalmente en curar los trastornos mentales de sus pacientes, tú preferías prolongarlos para poder estudiarlos mejor. Cuando llegó la Gran Depresión y el hospital perdió la mayor parte de su financiación, decidiste dedicarte a la práctica privada antes que soportar una reducción salarial. Sin embargo, pronto te aburrieron las triviales quejas de los clientes que podían permitirse tus servicios, y empezaste a buscar otros más extraños y perturbados, tuvieran dinero o no.',
     personalidad:
@@ -55,14 +55,14 @@ export const investigadores = [
     profesion: 'Médico',
     motivacion: 'Impacto Súbito',
     beneficios:
-      'Empleando Medicina o Consuelo puedes acceder a registros médicos y a salas de hospitales restringidas al público. En el Hospital de Lenox Hill te bastará mantener una pequeña charla para poder emplear Consuelo y ganar acceso a cualquier lugar de las instalaciones.Cuando empleas Primeros Auxilios para atender a otros, estos recuperan 3 puntos de Salud por cada punto de Primeros Auxilios invertido en lugar de 2. Cuando empleas Primeros Auxilios para atenderte a ti misma, recuperas 2 puntos de Salud por cada punto de Primeros Auxilios invertido en lugar de 1.Puedes estabilizar a un paciente Gravemente Herido gastando 1 punto de Primeros Auxilios en lugar de 2.',
+      'Empleando Medicina o Consuelo puedes acceder a registros médicos y a salas de hospitales restringidas al público. En el Hospital de Lenox Hill te bastará mantener una pequeña charla para poder emplear Consuelo y ganar acceso a cualquier lugar de las instalaciones.\nCuando empleas Primeros Auxilios para atender a otros, estos recuperan 3 puntos de Salud por cada punto de Primeros Auxilios invertido en lugar de 2. Cuando empleas Primeros Auxilios para atenderte a ti misma, recuperas 2 puntos de Salud por cada punto de Primeros Auxilios invertido en lugar de 1.\nPuedes estabilizar a un paciente Gravemente Herido gastando 1 punto de Primeros Auxilios en lugar de 2.',
     salud: 12,
     estabilidad: 10,
     cordura: 8,
     pilares:
-      'El imparable progreso del conocimiento científico. Tu creencia en la capacidad de la mente para expandir su entendimiento y abarcar todo lo que puede percibir.',
+      'El imparable progreso del conocimiento científico.\nTu creencia en la capacidad de la mente para expandir su entendimiento y abarcar todo lo que puede percibir.',
     fuentes:
-      'Jeffery Malley, tu exmarido. El Dr. Hastings, un compañero de especialidad en Lenox Hill.El Dr. Peter Trubino, tu padre, ahora jubilado en Rochester, Nueva York.',
+      'Jeffery Malley, tu exmarido.\nEl Dr. Hastings, un compañero de especialidad en Lenox Hill.\nEl Dr. Peter Trubino, tu padre, ahora jubilado en Rochester, Nueva York.',
     trasfondo:
       'Nunca tuviste planeado casarte. Nunca tuviste planeado quedarte embarazada. Siempre quisiste concentrarte en tu carrera. La escuela de medicina supuso tal esfuerzo de tiempo, dinero y relaciones sociales que no estabas dispuesta a darte por vencida tan fácilmente. Pero entonces conociste a Jeffery, y te casaste. Y después tuvisteis a Matthew. Y creíste que la vida había echado tus planes al traste, que tenía otra cosa reservada para ti. Pero algo no iba bien en el organismo de Matthew. Tenía un cuerpo extraño en el pulmón. No podía respirar como los demás recién nacidos. Murió al cabo de tres semanas. Así que volviste al Hospital de Lenox Hill, esta vez como especialista y no como médico de cabecera. Tu deseo de entender qué le había ocurrido a Matthew impulsó tu investigación sobre malformaciones congénitas, anomalías, y otras deformaciones del organismo. En algún momento del camino también perdiste tu vínculo con Jeffery y él solicitó el divorcio. Quizá fuera para bien. La vida, la estructura física de los vivos, es mucho más que un marido, unos hijos y un montón de normalidad. También está lo raro, lo extraño y tu trabajo.',
     personalidad:
